@@ -1,0 +1,74 @@
+body{
+  background-image: url("https://images.unsplash.com/photo-1530334580314-1e7a340426a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.container1 {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navbar-brand{
+  margin-left: 20px;
+}
+
+.container2{
+  margin-right: 100px;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.jumbotron{
+  margin-top: 60px;
+}
+
+.for-margin{
+  margin-top: 60px;
+}
+
+.head-card{
+    margin-bottom: 20px;
+}
+
+.head-card img{
+    height: 15vw;
+}
+@media only screen and (max-width:600px){
+    .head-card img{
+    height: 40vw;
+}
+}
+

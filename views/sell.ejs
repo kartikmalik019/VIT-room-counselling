@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>BUY-agroHand</title>
+    <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/buy.css">
+    <link rel="stylesheet" type="text/css" href="css/buy1.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="container1" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="#">VIT-Room counselling</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/buy">Find</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Create</a></li>
+                <li class="nav-item  container2"><a class="nav-link" href="/logout">Logout(<%= currentUser.username %>)</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <div class="ui main text container segment">
+    <div class="ui huge header">Create A Deal</div>
+    <form class="ui form" action="/blogs" method="POST">
+       <div class="field">
+           <label>Type of room</label>
+           <input type="text" name="blog[title]" placeholder="Title">
+       </div>
+        <div class="field">
+           <label>Your Pic</label>
+           <input type="text" name="blog[image]" placeholder="Image URL">
+       </div>
+        <div class="field">
+           <label>Description</label>
+           
+           <textarea name="blog[body]" id="" cols="30" rows="10"></textarea>
+       </div>
+        
+        
+        
+        <input class="ui violet big basic button" type="submit">
+    </form>
+</div>
+   
+    
+</body>
+
+</html>

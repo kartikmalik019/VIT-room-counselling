@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>Room-select</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/buy.css">
+    <link rel="stylesheet" type="text/css" href="css/buy1.css">
+    <script src="js/main.js"></script>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="container1" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="#">VIT-roomcounselling</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Find</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sell">Create</a></li>
+                <li class="nav-item  container2"><a class="nav-link" href="/logout">Logout(<%= currentUser.username %>)</a></li>
+            </ul>
+        </div>
+
+
+    </nav>
+    <div class="container">
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body"></i>
+                        </div>
+                        <!--end of col-->
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Check the current market">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit" onClick="whichGraph()">Search</button>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </form>
+            </div>
+            <!--end of col-->
+        </div>
+    </div>
+    
+    
+    
+    <div class="container jumbotron" style="background-color:transparent;">
+		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+	</div>
+
+
+	<div class="container">
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" onkeyup="myFunction()" id="myInput" type="text" placeholder="What are you looking for?">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+</div>
+    
+<!--    ////////////////////////////////////////////////////////////////////////////////////////////////////   -->
+   
+    <div class="container for-margin">
+	<div class="row">
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card"  mb-5>
+			<div class="card" style="width: 18rem;">
+  				<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top">
+  				<div class="card-body">
+    				<h5 class="card-title">2-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+ 			 	</div>
+			</div>
+		</div>
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card"  mb-5>
+			<div class="card" style="width: 18rem;">
+  				<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" >
+  				<div class="card-body">
+    				<h5 class="card-title">4-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+ 			 	</div>
+			</div>
+		</div>
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card"  mb-5>
+			<div class="card" style="width: 18rem;">
+  				<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" >
+  				<div class="card-body">
+    				<h5 class="card-title">3-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+ 			 	</div>
+			</div>
+		</div>
+	
+	
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card">
+			<div class="card" style="width: 18rem;">
+  				<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" >
+  				<div class="card-body">
+    				<h5 class="card-title">2-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+ 			 	</div>
+			</div>
+		</div>
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card">
+			<div class="card" style="width: 18rem;">
+  				<img src= "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" >
+  				<div class="card-body">
+    				<h5 class="card-title">6-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+    				
+ 			 	</div>
+			</div>
+		</div>
+		<div class="col col-lg-4 col-md-6 col-sm-12 head-card">
+			<div class="card" style="width: 18rem;">
+  				<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" >
+  				<div class="card-body">
+    				<h5 class="card-title">4-bed room</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    				<a href="#" class="btn btn-success"> <h6>Send Request</h6></a>
+ 			 	</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+    
+    
+<script src="js/buy.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>
